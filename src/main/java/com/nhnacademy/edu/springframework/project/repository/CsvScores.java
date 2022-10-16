@@ -1,5 +1,6 @@
 package com.nhnacademy.edu.springframework.project.repository;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,9 +20,11 @@ public class CsvScores implements Scores {
     }
 
     // TODO 5 : score.csv 파일에서 데이터를 읽어 멤버 변수에 추가하는 로직을 구현하세요.
+    File csvFile;
+    String filePath = "./src/main/resources/data/score.csv";
     @Override
     public void load() {
-
+        csvFile = new File(filePath);
     }
 
     @Override

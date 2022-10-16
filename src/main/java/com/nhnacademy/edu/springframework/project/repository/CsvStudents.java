@@ -2,6 +2,7 @@ package com.nhnacademy.edu.springframework.project.repository;
 
 import com.nhnacademy.edu.springframework.project.service.Student;
 
+import java.io.File;
 import java.util.Collection;
 
 
@@ -23,9 +24,11 @@ public class CsvStudents implements Students {
 
     // TODO 7 : student.csv 파일에서 데이터를 읽어 클래스 멤버 변수에 추가하는 로직을 구현하세요.
     // 데이터를 적재하고 읽기 위해서, 적절한 자료구조를 사용하세요.
+    File csvFile;
+    String filePath = "./src/main/resources/data/student.csv";
     @Override
     public void load() {
-
+        csvFile = new File(filePath);
     }
 
     @Override
@@ -40,5 +43,7 @@ public class CsvStudents implements Students {
     @Override
     public void merge(Collection<Score> scores) {
 
+        csvStudents.findAll().
+                forEach(student -> ());
     }
 }
