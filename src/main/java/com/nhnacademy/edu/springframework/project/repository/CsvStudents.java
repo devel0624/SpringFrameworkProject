@@ -13,8 +13,12 @@ public class CsvStudents implements Students {
     /** TODO 3 :
      * Java Singleton 패턴으로 getInstance() 를 구현하세요.
      **/
+    private static CsvStudents csvStudents;
     public static Students getInstance() {
-        return null;
+        if(csvStudents == null){
+            csvStudents = new CsvStudents();
+        }
+        return csvStudents;
     }
 
     // TODO 7 : student.csv 파일에서 데이터를 읽어 클래스 멤버 변수에 추가하는 로직을 구현하세요.
