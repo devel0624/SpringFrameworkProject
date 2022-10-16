@@ -10,12 +10,12 @@ public class CsvScores implements Scores {
     /** TODO 2 :
      * Java Singleton 패턴으로 getInstance() 를 구현하세요.
      **/
-    private static CsvScores scores = null;
+    private static CsvScores csvScores = null;
     public static Scores getInstance() {
-        if(scores == null){
-            scores = new CsvScores();
+        if(csvScores == null){
+            csvScores = new CsvScores();
         }
-        return scores;
+        return csvScores;
     }
 
     // TODO 5 : score.csv 파일에서 데이터를 읽어 멤버 변수에 추가하는 로직을 구현하세요.
